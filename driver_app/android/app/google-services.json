@@ -1,0 +1,158 @@
+{
+  "project_info": {
+    "project_number": "396808961242",
+    "project_id": "ride-sharing-app-1",
+    "storage_bucket": "ride-sharing-app-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396808961242:android:132b0cbc9c828aebebf9e3",
+        "android_client_info": {
+          "package_name": "com.driver.app12"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396808961242-g1bl0oqp5ekeee0pci551evqre973hf2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.driver.app12",
+            "certificate_hash": "ece3810218dc8f298fdf4098568d1d797213e83a"
+          }
+        },
+        {
+          "client_id": "396808961242-0rd751e6aib105finnp4jggjr83fdgis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj5y6leoSyCt1eZaqaWyrsBhToOiLuGSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396808961242-0rd751e6aib105finnp4jggjr83fdgis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396808961242:android:a2033979339b402cebf9e3",
+        "android_client_info": {
+          "package_name": "com.ride_sharing1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396808961242-emettf9bl1odba1hg4d4ea93lu6gumsh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ride_sharing1",
+            "certificate_hash": "ece3810218dc8f298fdf4098568d1d797213e83a"
+          }
+        },
+        {
+          "client_id": "396808961242-0rd751e6aib105finnp4jggjr83fdgis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj5y6leoSyCt1eZaqaWyrsBhToOiLuGSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396808961242-0rd751e6aib105finnp4jggjr83fdgis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396808961242:android:0264f18a538d1487ebf9e3",
+        "android_client_info": {
+          "package_name": "com.samagri.sellerApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396808961242-8a8obs6mp1sfj2f9jv7uemr68g2f7sul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.samagri.sellerApp",
+            "certificate_hash": "ece3810218dc8f298fdf4098568d1d797213e83a"
+          }
+        },
+        {
+          "client_id": "396808961242-0rd751e6aib105finnp4jggjr83fdgis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj5y6leoSyCt1eZaqaWyrsBhToOiLuGSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396808961242-0rd751e6aib105finnp4jggjr83fdgis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396808961242:android:7b6eb2b52f32ea15ebf9e3",
+        "android_client_info": {
+          "package_name": "com.driver.app12"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396808961242-617tc8h4tb2l0k2mg1dnrf8q911rqo1r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.driver.app12",
+            "certificate_hash": "ece3810218dc8f298fdf4098568d1d797213e83a"
+          }
+        },
+        {
+          "client_id": "396808961242-0rd751e6aib105finnp4jggjr83fdgis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj5y6leoSyCt1eZaqaWyrsBhToOiLuGSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396808961242-0rd751e6aib105finnp4jggjr83fdgis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

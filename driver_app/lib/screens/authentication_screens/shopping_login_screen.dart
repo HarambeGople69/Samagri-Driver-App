@@ -72,7 +72,7 @@ class _ShoppingLoginScreenState extends State<ShoppingLoginScreen> {
                         ),
                         OurSizedBox(),
                         Text(
-                          "Samagri Driver",
+                          "Go Mart: Driver",
                           style: TextStyle(
                             fontSize: ScreenUtil().setSp(27.5),
                             color: darklogoColor,

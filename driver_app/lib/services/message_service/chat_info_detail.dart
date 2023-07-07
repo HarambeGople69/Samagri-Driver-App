@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:myapp/models/driver_model.dart';
 import 'package:myapp/models/user_model.dart';
 import 'package:myapp/services/notification_service/notification_service.dart';
 
@@ -67,9 +68,78 @@ class ChatDetailFirebase {
         "userModel.profile_pic",
         "",
         userModel.token,
-                                                                                                                                                                                                                                                                                                                                                                                                                                );
+      );
 
       print("Doneee sending message");
+    } catch (e) {}
+  }
+
+  drivermessageDetail(String message, DriverModel driverModel,
+      FirebaseUser11Model firebaseUser11Model) async {
+    print("MESSAGE DETAIL SCREEN");
+    print("MESSAGE DETAIL SCREEN");
+    print("MESSAGE DETAIL SCREEN");
+    try {
+      await FirebaseFirestore.instance
+          .collection("ChatRoom")
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .collection("Chat")
+          .doc(firebaseUser11Model.uid)
+          .set({"timestamp": Timestamp.now(), "uid": firebaseUser11Model.uid});
+      await FirebaseFirestore.instance
+          .collection("ChatRoom")
+          //Chatroom ->currentuid ->chat -prasanid -> messages ->[]
+          //Chatroom ->prasanuid ->chat -currentid -> messages ->[]
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .collection("Chat")
+          .doc(firebaseUser11Model.uid)
+          .collection("Messages")
+          .add({
+        "message": message,
+        "type": "text",
+        "ownerId": FirebaseAuth.instance.currentUser!.uid,
+        "receiverId": firebaseUser11Model.uid,
+        "imageUrl": "",
+        "timestamp": Timestamp.now(),
+      });
+      await FirebaseFirestore.instance
+          .collection("ChatRoom")
+          .doc(firebaseUser11Model.uid)
+          .collection("Chat")
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .set({
+        "timestamp": Timestamp.now(),
+        "uid": FirebaseAuth.instance.currentUser!.uid,
+      });
+      await FirebaseFirestore.instance
+          .collection("ChatRoom")
+          .doc(firebaseUser11Model.uid)
+          .collection("Chat")
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .collection("Messages")
+          .add({
+        "message": message,
+        "type": "text",
+        "ownerId": FirebaseAuth.instance.currentUser!.uid,
+        "receiverId": firebaseUser11Model.uid,
+        "imageUrl": "",
+        "timestamp": Timestamp.now(),
+      });
+      // var a = await FirebaseFirestore.instance
+      //     .collection("Users")
+      //     .doc(FirebaseAuth.instance.currentUser!.uid)
+      //     .get();
+      // FirebaseUser11Model userModel11 = FirebaseUser11Model.fromMap(a);
+      // print(userModel.name);
+      await NotificationService().sendNotification(
+        "${driverModel.user_name} messaged you",
+        message,
+        "userModel.profile_pic",
+        "",
+        firebaseUser11Model.token,
+      );
+
+      // print("Doneee sending message");
     } catch (e) {}
   }
 

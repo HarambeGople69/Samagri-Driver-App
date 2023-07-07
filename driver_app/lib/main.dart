@@ -17,7 +17,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   // If you're going to use other Firebase services in the background, such as Firestore,
   // make sure you call `initializeApp` before using other Firebase services.
   // await Firebase.initializeApp();
-  print("INside background handler");
+  print("INside background handl=er");
   NotificationService.display(message);
 }
 
@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
             builder: (child, Widget) {
               return GetMaterialApp(
                 navigatorKey: navigatorKey,
-                title: "Samagri Driver",
+                title: "Go Mart: Driver",
                 supportedLocales: const [
                   Locale('en', 'US'),
                   Locale('ne', 'NP'),

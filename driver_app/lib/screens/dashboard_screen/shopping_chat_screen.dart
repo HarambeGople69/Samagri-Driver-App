@@ -7,7 +7,9 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
+import 'package:myapp/models/driver_model.dart';
 import 'package:myapp/screens/dashboard_screen/shopping_chat_send_screen.dart';
+import 'package:myapp/screens/dashboard_screen/shopping_driver_chat_screen.dart';
 import 'package:myapp/widget/our_spinner.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -132,7 +134,7 @@ class _ShoppingChatScreenState extends State<ShoppingChatScreen>
                             // return Text(messangeHomeModel.uid);
                             return StreamBuilder(
                               stream: FirebaseFirestore.instance
-                                  .collection("Sellers")
+                                  .collection("Users")
                                   .where("uid",
                                       isEqualTo: messangeHomeModel.uid)
                                   .snapshots(),
@@ -145,31 +147,51 @@ class _ShoppingChatScreenState extends State<ShoppingChatScreen>
                                         shrinkWrap: true,
                                         itemCount: snapshot.data!.docs.length,
                                         itemBuilder: (context, index) {
-                                          UserModel userModel =
-                                              UserModel.fromMap(
+                                          FirebaseUser11Model userModel =
+                                              FirebaseUser11Model.fromMap(
                                                   snapshot.data!.docs[index]);
                                           return InkWell(
                                             onTap: () async {
                                               var a = await FirebaseFirestore
                                                   .instance
-                                                  .collection("Users")
+                                                  .collection("Drivers")
                                                   .doc(FirebaseAuth.instance
                                                       .currentUser!.uid)
                                                   .get();
-                                              FirebaseUser11Model userModel11 =
-                                                  FirebaseUser11Model.fromMap(
-                                                      a);
+                                              DriverModel driverModel =
+                                                  DriverModel.fromDriverMap(a);
                                               Navigator.push(
                                                 context,
                                                 PageTransition(
                                                   type: PageTransitionType
                                                       .leftToRight,
-                                                  child: MessageSendScreen(
-                                                    firebaseUser11: userModel11,
+                                                  child:
+                                                      DriverMessageSendScreen(
                                                     userModel: userModel,
+                                                    driverModel: driverModel,
                                                   ),
                                                 ),
                                               );
+                                              // var a = await FirebaseFirestore
+                                              //     .instance
+                                              //     .collection("Users")
+                                              //     .doc(FirebaseAuth.instance
+                                              //         .currentUser!.uid)
+                                              //     .get();
+                                              // FirebaseUser11Model userModel11 =
+                                              //     FirebaseUser11Model.fromMap(
+                                              //         a);
+                                              // Navigator.push(
+                                              //   context,
+                                              //   PageTransition(
+                                              //     type: PageTransitionType
+                                              //         .leftToRight,
+                                              //     child: MessageSendScreen(
+                                              //       firebaseUser11: userModel11,
+                                              //       userModel: userModel,
+                                              //     ),
+                                              //   ),
+                                              // );
                                             },
                                             child: Container(
                                               padding: EdgeInsets.symmetric(

@@ -71,6 +71,12 @@ class PickOrderService {
         "isDelivered": true,
         "status": "Order Delivered",
       });
+      await FirebaseFirestore.instance
+          .collection("Drivers")
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .update({
+        "delivered": a.data()!["delivered"] + 1,
+      });
       var b = await FirebaseFirestore.instance
           .collection("Users")
           .doc(inProgressProductModel.ownerId)

@@ -175,7 +175,7 @@ class PhoneAuth {
 
   logout() async {
     await FirebaseFirestore.instance
-        .collection("Users")
+        .collection("Driver")
         .doc(FirebaseAuth.instance.currentUser!.uid)
         .update({
       "token": "",

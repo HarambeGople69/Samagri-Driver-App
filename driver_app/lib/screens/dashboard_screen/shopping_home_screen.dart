@@ -205,7 +205,7 @@ class _ShoppingHomeScreenState extends State<ShoppingHomeScreen>
                               width: ScreenUtil().setSp(7.5),
                             ),
                             Text(
-                              "Samagri Driver",
+                              "Go Mart: Driver",
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 fontSize: ScreenUtil().setSp(20.5),

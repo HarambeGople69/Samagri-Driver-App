@@ -81,15 +81,15 @@ class _ShoppingFullAppPageState extends State<ShoppingFullApp>
 
       // ShopAddProductScreen(),
       ShoppingChatScreen(),
-      // ShoppingProfileScreen()
-      Center(
-        child: OurElevatedButton(
-          title: "Logout",
-          function: () {
-            GoogleAuth().logout(context);
-          },
-        ),
-      ),
+      ShoppingProfileScreen()
+      // Center(
+      //   child: OurElevatedButton(
+      //     title: "Logout",
+      //     function: () {
+      //       GoogleAuth().logout(context);
+      //     },
+      //   ),
+      // ),
     ];
     return Obx(() => GestureDetector(
           // onHorizontalDragEnd: (dragDetail) {
